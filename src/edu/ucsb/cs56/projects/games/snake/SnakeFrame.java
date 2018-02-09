@@ -695,6 +695,7 @@ public void DrawGrid(Graphics g){
 		this.setVisible(true); 
 */
 
+	
 	//Set the height and width of the main menu
 	this.setSize(500,500);
 	//Set the color of the main menu and fill it
@@ -755,9 +756,11 @@ public void DrawGrid(Graphics g){
 	String HighScore3 = new String("High Score 3) ");
 	String gameAreaSize = new String("Game Area Size:");
 	String areaSizes = new String("3) Small   4) Medium   5) Large");
-
+	
+	
 	g.setColor(Color.RED);
 	g.setFont(font1);
+       
 	g.drawString(HighScore1 + hScore.getScore(), this.getWidth() / 2 -fm.stringWidth(HighScore1) /2, 135);
 	g.drawString(HighScore2 + hScore2.getScore(), this.getWidth() / 2 -fm.stringWidth(HighScore2) /2, 155);
 	g.drawString(HighScore3 + hScore3.getScore(), this.getWidth() / 2 -fm.stringWidth(HighScore3) /2, 175);
@@ -793,7 +796,14 @@ public void DrawGrid(Graphics g){
 	g.drawString("Use the arrow keys to control the", 20, 135);
 	g.drawString("snake and eat as many apples as", 20, 150);
 	g.drawString("possible without running into the", 20, 165);
-	g.drawString("tail.", 20, 180);
+	g.drawString("tail. There are three special fruits", 20, 180);
+	g.drawString("that give temporary powers:", 20, 195);
+	g.drawString("- Green fruit speeds up the snake.",20,210);
+	g.drawString("- Purple fruit widens the snake.",20, 225); 
+	g.drawString("- Black fruit allows you to pass",20,240); 
+	g.drawString("through objects such as yourself,",20,255);
+	g.drawString("other snakes, and walls.",20,270);
+	
 
 
 	g.drawString("Two Player", 325, 50);
@@ -825,6 +835,9 @@ public void DrawGrid(Graphics g){
 	g.drawString("In this mode, you won't be able to pass through walls, they will be", 40, 405);
 	g.drawString("a barrier. If you collide with the wall you will respawn. The", 60,420);
 	g.drawString("objective remains the same but are you up for the challenge?", 45,435);
+
+	g.drawString("Reverse Mode:",200, 465);
+	g.drawString("Your controls are reversed!", 150, 480);
 
 
 	g.setColor(Color.ORANGE);
